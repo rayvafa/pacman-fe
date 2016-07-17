@@ -1,10 +1,27 @@
 import React from 'react';
-import selectText from './modules/select-text.js';
+import textSelectListener from './modules/text-select-listener.js';
 
-let PacmanFe = React.createClass({
-  render() {
-    //Bootstrapped component
-  }
+const PacmanFe = React.createClass({
+
+	getInitialState() {
+		return {
+			selectedText: ''
+		};
+	},
+
+	componentDidMount() {
+		textSelectListener((selectedText) => {
+			this.setState({
+				selectedText: selectedText
+			});
+		});
+	},
+
+	render() {
+		return (
+			<div>Selected text: {this.state.selectedText}</div>
+		);
+	}
 });
 
 export default PacmanFe;
