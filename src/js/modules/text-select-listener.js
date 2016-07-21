@@ -1,4 +1,4 @@
-const textSelectListener = (callback) => {
+const textSelectListener = (element, callback) => {
 
 	const getSelectedText = () => {
 		let text = "";
@@ -17,8 +17,8 @@ const textSelectListener = (callback) => {
 		}
 	};
 
-	document.onmouseup = onTextSelected;
-	document.onkeyup = onTextSelected;
+	element.onmouseup = onTextSelected;
+	element.onkeyup = onTextSelected;
 
 };
 

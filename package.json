@@ -14,7 +14,6 @@
     "watch": "fe-build watch",
     "start": "npm run watch",
     "prepublish": "not-in-install && npm run build:module || in-install",
-
     "build": "node -e 'require(\"depd\")(\"npm run build\")(\"use: npm run build:local\")' && npm run build:local",
     "dist": "node -e 'require(\"depd\")(\"npm run dist\")(\"use: npm run build:bundle\")' && npm run build:bundle",
     "dist:build": "node -e 'require(\"depd\")(\"npm run dist:build\")(\"use: npm run build:module\")' && npm run build:module"
@@ -31,6 +30,7 @@
   "homepage": "https://github.com/domain-group/fe-co-pacman-fe#readme",
   "dependencies": {
     "@domain-group/fe-brary": "^7.1.0",
+    "@domain-group/fe-co-autocomplete": "^1.1.2",
     "@domain-group/fe-helper": "^2.2.0"
   },
   "devDependencies": {
@@ -58,6 +58,8 @@
       "es2015",
       "react"
     ],
-    "plugins": ["transform-es3-member-expression-literals"]
+    "plugins": [
+      "transform-es3-member-expression-literals"
+    ]
   }
 }

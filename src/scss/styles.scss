@@ -1,1 +1,6 @@
-// Comment to force compilation
+// default settings
+@import '@domain-group/fe-brary/fe-brary';
+
+// React components
+@import '@domain-group/fe-co-autocomplete/lib/scss/fe-co-autocomplete';
+@import './partials/pacman-fe';

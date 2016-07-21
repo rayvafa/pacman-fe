@@ -1,27 +1,32 @@
 import React from 'react';
 import textSelectListener from './modules/text-select-listener.js';
+import Tags from './components/tags.js';
 
 const PacmanFe = React.createClass({
 
-	getInitialState() {
-		return {
-			selectedText: ''
-		};
-	},
+  getInitialState() {
+    return {
+      selectedText: ''
+    };
+  },
 
-	componentDidMount() {
-		textSelectListener((selectedText) => {
-			this.setState({
-				selectedText: selectedText
-			});
-		});
-	},
+  componentDidMount() {
+    textSelectListener(document.getElementById('property-description'), (selectedText) => {
+      this.setState({
+        selectedText: selectedText
+      });
+    });
+  },
 
-	render() {
-		return (
-			<div>Selected text: {this.state.selectedText}</div>
-		);
-	}
+  render() {
+    return (
+      <div>
+        <div>Selected text: {this.state.selectedText}</div>
+        <Tags />
+        <button className='annotator-button'>Submit</button>
+      </div>
+    );
+  }
 });
 
 export default PacmanFe;
