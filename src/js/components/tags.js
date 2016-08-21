@@ -11,7 +11,7 @@ const Tags = React.createClass({
     return (
       <div className="tags-wrap">
         <Autocomplete
-          name="tags"
+          name="selectedTextTags"
           options={tagList}
           allowCreate
           placeholder="Add tags..."
