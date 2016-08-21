@@ -2,10 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import PropertyDescriptionAnnotator from './property-description-annotator.js';
 
-const pacmanFE = _ => {
-  var entryPoint = document.querySelector('.fe-co-pacman-fe-entry-point');
+const pacmanFE = () => {
+  const entryPoint = document.querySelector('.fe-co-pacman-fe-entry-point');
   ReactDOM.render(
-    <PropertyDescriptionAnnotator/>,
+    <PropertyDescriptionAnnotator />,
     entryPoint
   );
 };

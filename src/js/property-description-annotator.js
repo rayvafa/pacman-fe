@@ -6,14 +6,14 @@ const PropertyDescriptionAnnotator = React.createClass({
 
   getInitialState() {
     return {
-      selectedText: ''
+      selectedText: '',
     };
   },
 
   componentDidMount() {
     textSelectListener(document.getElementById('pendingdescription'), (selectedText) => {
       this.setState({
-        selectedText: selectedText
+        selectedText,
       });
     });
   },
@@ -23,10 +23,10 @@ const PropertyDescriptionAnnotator = React.createClass({
       <div>
         <div>Selected text: {this.state.selectedText}</div>
         <Tags />
-        <button className='annotator-button'>Submit</button>
+        <button className="annotator-button">Submit</button>
       </div>
     );
-  }
+  },
 });
 
 export default PropertyDescriptionAnnotator;
