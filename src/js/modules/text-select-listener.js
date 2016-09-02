@@ -16,6 +16,7 @@ const textSelectListener = (element, callback) => {
     }
   };
 
+  // todo: replace these with event listeners
   element.onmouseup = onTextSelected;
   element.onkeyup = onTextSelected;
 };
