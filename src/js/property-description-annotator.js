@@ -22,15 +22,14 @@ const PropertyDescriptionAnnotator = React.createClass({
     return (
       <div>
         <div className="form-group shiny-input-container">
-          <label className="control-label" htmlFor="selectedText">Selected Description</label>
+          <label className="control-label" htmlFor="selectedText">Selected Description:</label>
           <p>{this.state.selectedText}</p>
           <input name="selectedText" value={this.state.selectedText} type="hidden" />
         </div>
         <div>
-          <label className="control-label" htmlFor="selectedTextTags">Related Tags</label>
+          <label className="control-label" htmlFor="selectedTextTags">Related Tags:</label>
           <Tags />
         </div>
-        <button className="annotator-button">Submit</button>
       </div>
     );
   },
